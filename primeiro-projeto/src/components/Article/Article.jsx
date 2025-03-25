@@ -1,16 +1,15 @@
 import React from 'react';
-import articleImg from '../../assets/images/tumb_dashboards.svg'
+import './styles.css';
 
 export class Article extends React.Component {
   render() {
     return (
-      <article>
-        <img src={articleImg} alt="" />
+      <article id='article'>
+        <img src={this.props.thumbnail} alt={this.props.title} />
         <div className="article-infos">
-            <h2>Desingnin Dashboards</h2>
-            <h3>NASA</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe iusto expedita esse voluptates vitae dolorum dignissimos eos quae a magnam maxime, aliquid numquam quam sint quis quasi eligendi unde?</p>
+            <h2>{this.props.title}</h2>
+            <h3>{this.props.provider}</h3>
+            <p>{this.props.description}</p>
         </div>
       </article>
     );
